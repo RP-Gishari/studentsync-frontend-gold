@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import { create } from "zustand";
-import { studentService } from "../lib/api";
-
+import { API } from "../lib/api";
 const useStudentStore = create((set, get) => ({
   students: [],
   student: {},
@@ -12,8 +11,7 @@ const useStudentStore = create((set, get) => ({
   fetchStudents: async () => {
     set({ loading: true, error: null });
     try {
-      const response = await studentService.getAllStudents();
-
+      const response = await API.getAllStudents();
       if (response.success) {
         set({ students: response.data, loading: false });
       } else {
@@ -27,7 +25,16 @@ const useStudentStore = create((set, get) => ({
   // Get single student
   getStudent: async (id) => {
     set({ loading: true, error: null });
-    // implementation goes here
+    try {
+      const response = await API.getStudent(id);
+      if (response.success) {
+        set({ student: response.data, loading: false });
+      } else {
+        set({ error: response.message, loading: false });
+      }
+    } catch (error) {
+      set({ error: error.message, loading: false });
+    }
   },
 
   // Add student
@@ -46,11 +53,6 @@ const useStudentStore = create((set, get) => ({
   deleteStudent: async (id) => {
     set({ loading: true, error: null });
     // implementation goes here
-  },
-
-  searchStudents: async (query) => {
-    set({ loading: true, error: null });
-    // Implementation goes here
   },
 }));
 
