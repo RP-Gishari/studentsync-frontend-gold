@@ -1,0 +1,8 @@
+import {useEffect } from 'react'
+import useStudentStore from '../store/studentStore'
+
+
+const getStudent = ()=> {
+    
+}
+
