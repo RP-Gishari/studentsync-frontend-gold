@@ -40,4 +40,14 @@ export const API = {
   async getStudent(id) {
     return apiRequest(`/students/${id}`);
   },
+  // update student information
+  async updateStudent(id, updatedData) {
+    return apiRequest(`/students/${id}`, {
+      method: "PUT",
+      body: JSON.stringify(updatedData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+  },
 };
