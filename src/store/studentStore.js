@@ -56,16 +56,37 @@ const useStudentStore = create((set, get) => ({
     }
   },
 
-  // Update student
-  updateStudent: async (id, studentData) => {
-    set({ loading: true, error: null });
-    // implementation goes here
-  },
+  // // Update student
+  // updateStudent: async (id, studentData) => {
+  //   set({ loading: true, error: null });
+  //   // implementation goes here
+
+  // },
 
   // Delete student
   deleteStudent: async (id) => {
     set({ loading: true, error: null });
-    // implementation goes here
+
+    try {
+      const response = await API.deleteStudent(id);
+
+      if (response.success) {
+        set((state) => ({
+          students: state.students.filter((student) => student.id !== id),
+          loading: false,
+        }));
+      } else {
+        set({
+          error: response.message || "Failed to delete student",
+          loading: false,
+        });
+      }
+    } catch (error) {
+      set({
+        error: error.message || "Something went wrong while deleting.",
+        loading: false,
+      });
+    }
   },
 }));
 

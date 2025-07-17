@@ -1,0 +1,118 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.form-card {
+  background: white;
+  width: 530px;
+  height: 540px;
+  padding: 30px;
+  padding-top: 1px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.colorSync {
+  font-family: Poppins;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #004b2f;
+}
+
+.form-title {
+  color: #004b2f;
+  font-family: Poppins;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 4px;
+}
+
+label {
+  font-size: 14px;
+  color: #555;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 16px;
+}
+
+.add-btn {
+  background-color: #83c727;
+  color: white;
+  border: 1px;
+  padding: 10px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background-color: #eee;
+  color: #333;
+  border: 1px solid #83c727;
+  padding: 10px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
