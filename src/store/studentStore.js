@@ -56,13 +56,6 @@ const useStudentStore = create((set, get) => ({
     }
   },
 
-  // // Update student
-  // updateStudent: async (id, studentData) => {
-  //   set({ loading: true, error: null });
-  //   // implementation goes here
-
-  // },
-
   // Delete student
   deleteStudent: async (id) => {
     set({ loading: true, error: null });
