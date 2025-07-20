@@ -13,7 +13,7 @@ const StudentList = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const [currentPage, setCurrentPage] = useState(1);
-  const studentsPerPage = 5;
+  const studentsPerPage = 7;
 
   useEffect(() => {
     fetchStudents();

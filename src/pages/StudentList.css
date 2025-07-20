@@ -37,7 +37,7 @@
   padding-left: 24px;
   gap: 8px;
   text-decoration: none;
-  border: 1px solid #83c727;;
+  border: 1px solid #83c727;
 }
 
 .add-student-btn:hover {
@@ -189,6 +189,7 @@
   left: 161px;
   angle: 0 deg;
   opacity: 1;
+  font-weight: normal;
 }
 
 .student-table tbody tr:first-child td {
