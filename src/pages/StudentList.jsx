@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useStudentStore from "../store/studentStore";
 import deleteIcon from "../assets/delete.png";
+import search from "../assets/search.png";
+import profilePic from "../assets/profileImg.png";
 import "./StudentList.css";
 
 const StudentList = () => {
+  const location = useLocation();
   const { students, fetchStudents, deleteStudent, loading, error } =
     useStudentStore();
   const [searchQuery, setSearchQuery] = useState("");
@@ -41,28 +44,34 @@ const StudentList = () => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  if (loading) return <div>Loading...</div>;
+  if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div>{error}</div>;
 
   return (
     <div className="student-list-container">
       <div className="header-row">
         <h2 className="allStudents">All students</h2>
-        <Link to="/add_student" className="add-student-btn">
+
+        <div className="search-bar">
+          <img className="searchIcon" src={search} />
+          <input
+            className="searchInput"
+            type="text"
+            placeholder="Search"
+            value={searchQuery}
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setCurrentPage(1);
+            }}
+          />
+        </div>
+        <Link
+          to="/add_student"
+          state={{ background: location }}
+          className="add-student-btn"
+        >
           + Add Student
         </Link>
-      </div>
-
-      <div className="search-bar">
-        <input
-          type="text"
-          placeholder="Search"
-          value={searchQuery}
-          onChange={(e) => {
-            setSearchQuery(e.target.value);
-            setCurrentPage(1);
-          }}
-        />
       </div>
 
       <table className="student-table">
@@ -72,14 +81,19 @@ const StudentList = () => {
             <th>Student ID</th>
             <th>Enrollment date</th>
             <th>Status</th>
-            <th>Action</th>
+            <th className="action">Action</th>
           </tr>
         </thead>
         <tbody>
           {currentStudents.map((student) => (
             <tr key={student.student_id} className="student-row">
               <td className="user-info">
-                {student.first_name} {student.last_name}
+                <div className="picName">
+                  <img src={profilePic} className="profilePic" />
+                  <div>
+                    {student.first_name} {student.last_name}
+                  </div>
+                </div>
               </td>
               <td>{student.student_id}</td>
               <td>

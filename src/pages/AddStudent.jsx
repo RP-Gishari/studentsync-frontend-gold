@@ -37,8 +37,11 @@ const AddStudent = () => {
     <div className="modal-backdrop">
       <div className="form-card">
         <div className="form-header">
-          <img src={logoAdd} alt="logo" className="form-logo" />
-          <h2 className="colorSync">STUDENTSYNC</h2>
+          <div className="logo-title">
+            <img src={logoAdd} alt="logo" className="form-logo" />
+            <h2 className="colorSync">STUDENTSYNC</h2>
+          </div>
+
           <p className="form-title">Add new student</p>
         </div>
         <form onSubmit={handleSubmit} className="form-body">
@@ -89,8 +92,7 @@ const AddStudent = () => {
                 onChange={handleChange}
                 required
               />
-            </div>
-            <div>
+
               <label>Contact Number</label>
               <input
                 name="contact_number"
@@ -98,8 +100,7 @@ const AddStudent = () => {
                 onChange={handleChange}
                 required
               />
-            </div>
-            <div>
+
               <label>Enrollment date</label>
               <input
                 name="enrollment_date"

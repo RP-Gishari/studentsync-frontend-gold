@@ -3,10 +3,10 @@
 }
 
 .student-list-container {
-  max-width: 1200px;
+  max-width: 1646px;
   margin: 40px auto;
   padding: 20px;
-  font-family: "Segoe UI", sans-serif;
+  font-family: inter;
   background: #fff;
   border-radius: 8px;
   position: relative;
@@ -16,39 +16,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .add-student-btn {
+  flow: horizontal;
   background-color: #83c727;
   color: white;
-  padding: 16px 24px;
+  width: 173px;
+  height: 51px;
+  top: 252px;
+  left: 1569px;
+  border-radius: 8px;
+  angle: 0 deg;
+  opacity: 1;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-left: 24px;
   gap: 8px;
-  border-radius: 5px;
   text-decoration: none;
-  font-weight: bold;
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
 }
 
 .add-student-btn:hover {
   background-color: #6baa21;
-}
-
-.search-bar {
-  position: absolute;
-  top: 35px;
-  right: 300px;
-}
-
-.search-bar input {
-  padding: 10px 14px;
-  width: 100%;
-  max-width: 300px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 15px;
 }
 
 .student-table {
@@ -56,38 +48,50 @@
   border-collapse: collapse;
   table-layout: auto;
   margin-top: 20px;
+  position: relative;
+  font-style: regular;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-family: inter;
 }
 
-.student-table th,
 .student-table td {
   padding: 14px 16px;
   text-align: left;
   border-bottom: 1px solid black;
-  vertical-align: middle;
   font-size: 14px;
   line-height: 1.4;
+  margin-top: 209px;
+  width: 1646px;
+  height: 108px;
+  font-style: regular;
 }
 
-.user-info {
-  align-items: center;
-  gap: 10px;
-  font: inter;
-}
-
-.avatar {
+.profilePic {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.picName {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
 }
 
 .status.enrolled {
-  color: green;
-  font-weight: bold;
+  color: black;
+  font-weight: regular;
 }
 
 .delete-icon {
+  cursor: pointer;
   width: 20px;
   cursor: pointer;
+  display: block;
+  margin-right: 10px;
 }
 
 .pagination {
@@ -112,6 +116,19 @@
 
 .allStudents {
   color: #83c727;
+  width: 225;
+  height: 46;
+  top: 262px;
+  left: 199px;
+  angle: 0 deg;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 38px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 @media (max-width: 768px) {
@@ -120,13 +137,59 @@
     align-items: flex-start;
     gap: 16px;
   }
+}
 
-  .search-bar {
-    position: static;
-    margin-top: 10px;
-  }
+.loading {
+  text-align: center;
+  margin-top: 250px;
+}
 
-  .search-bar input {
-    max-width: 100%;
-  }
+.search-bar {
+  position: relative;
+  width: 409;
+  height: 52;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+  margin-left: 400px;
+}
+
+.searchInput {
+  padding: 10px 14px 10px 40px;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.student-table thead {
+  border-radius: 10px;
+  width: 1602px;
+  height: 53px;
+}
+
+.student-table th {
+  padding: 14px 16px;
+  text-align: left;
+  background-color: #ebf9da;
+  width: 1602px;
+  height: 53px;
+  top: 369px;
+  left: 161px;
+  angle: 0 deg;
+  opacity: 1;
+}
+
+.student-table tbody tr:first-child td {
+  padding-top: 40px;
 }
