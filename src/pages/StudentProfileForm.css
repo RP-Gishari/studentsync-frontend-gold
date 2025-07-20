@@ -196,5 +196,9 @@ input[readonly] {
   border-top-right-radius: 21px;
 }
 .names{
+  color: #111111;
+  
+}
+.email-address{
   color: #111;
 }

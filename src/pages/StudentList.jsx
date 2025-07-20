@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import useStudentStore from "../store/studentStore";
 
 const StudentList = () => {
-  // eslint-disable-next-line no-unused-vars
   const { students, fetchStudents, loading, error } = useStudentStore();
+  console.log("Students:", students);
 
   useEffect(() => {
     fetchStudents();

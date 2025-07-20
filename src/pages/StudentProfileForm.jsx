@@ -81,9 +81,9 @@ const StudentProfileForm = () => {
         <div className="profile-avatar">
           <img src={student.profile} alt="Avatar" />
           <div>
-            <h3 className="names">
+            <h4 className="names">
               {student.first_name} {student.last_name}
-            </h3>
+            </h4>
             <p>{student.email}</p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const StudentProfileForm = () => {
       </form>
 
       <div className="email-info">
-        <h4>My email Address</h4>
+        <h4 className="email-address">My email Address</h4>
         <div className="email-row">
           <img src={image} alt="Email" />
           <span>{student.email}</span>
