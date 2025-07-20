@@ -16,14 +16,14 @@
 }
 
 .form-card {
-  font-family: Inter, sans-serif;
+  font-family: Inter;
   font-weight: 600;
   font-size: 18px;
   line-height: 1.4;
   background: #fff;
   border-radius: 16px;
   width: 530px;
-  height: 540px;
+  height: 580px;
   padding: 30px;
   padding-top: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);

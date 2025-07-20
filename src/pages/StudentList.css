@@ -37,6 +37,7 @@
   padding-left: 24px;
   gap: 8px;
   text-decoration: none;
+  border: 1px solid #83c727;;
 }
 
 .add-student-btn:hover {
@@ -141,7 +142,7 @@
 
 .loading {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 350px;
 }
 
 .search-bar {

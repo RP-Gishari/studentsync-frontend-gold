@@ -65,12 +65,10 @@ const StudentList = () => {
             }}
           />
         </div>
-        <Link
-          to="/add_student"
-          state={{ background: location }}
-          className="add-student-btn"
-        >
-          + Add Student
+        <Link to="/add_student" state={{ background: location }}>
+          <button className="add-student-btn">
+            <strong>+ Add Student</strong>
+          </button>
         </Link>
       </div>
 

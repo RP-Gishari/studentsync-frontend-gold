@@ -1,14 +1,17 @@
 import { useState } from "react";
 import useStudentStore from "../store/studentStore";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import logoAdd from "../assets/logo.png";
 import "./AddStudent.css";
 
 const AddStudent = () => {
   const { addStudent, loading, error } = useStudentStore();
-  const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({
+  const navigate = useNavigate();
+  const location = useLocation();
+  const hasBackground = Boolean(location.state?.background);
+
+  const initialFormData = {
     first_name: "",
     last_name: "",
     student_id: "",
@@ -16,25 +19,36 @@ const AddStudent = () => {
     date_of_birth: "",
     contact_number: "",
     enrollment_date: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+  const resetForm = () => setFormData(initialFormData);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const result = await addStudent(formData);
+
     if (result?.success) {
-      navigate("/");
+      resetForm();
+      setTimeout(() => navigate(hasBackground ? -1 : "/"), 50);
     }
   };
 
-  const handleCancel = () => navigate("/");
+  const handleCancel = () => {
+    resetForm();
+    navigate(hasBackground ? -1 : "/");
+  };
+
+  const handleBackdropClick = (e) => {
+    if (e.target === e.currentTarget) handleCancel();
+  };
 
   return (
-    <div className="modal-backdrop">
+    <div className="modal-backdrop" onClick={handleBackdropClick}>
       <div className="form-card">
         <div className="form-header">
           <div className="logo-title">
