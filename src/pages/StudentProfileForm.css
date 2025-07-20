@@ -10,17 +10,18 @@ body {
 }
 
 .profile-card {
-  max-width: 900px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 50px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 21px;
+  top: 131px;
+  left: 104px;
 }
 
 .profile-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 620px;
   align-items: center;
   margin-bottom: 35px;
 }
@@ -28,19 +29,31 @@ body {
 .profile-avatar {
   display: flex;
   align-items: center;
-  gap: 16px;
+  width: 322px;
+  height: 100px;
+  top: 261px;
+  left: 264px;
 }
 
 .profile-avatar img {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  object-fit: cover;
+  padding-top: 55px;
+  padding-left: 30px;
+  width: 100px;
+  height: 100px;
+  left: 264px;
+  top: 261px;
 }
 
 .profile-avatar h3 {
+  width: 132px;
+  height: 30px;
+  top: 281px;
+  left: 388px;
   margin: 0;
   font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  font: bold;
 }
 
 .profile-avatar p {
@@ -50,13 +63,13 @@ body {
 }
 
 .edit-btn {
-  padding: 10px 24px;
-  background: linear-gradient(to right, #a8e063, #56ab2f);
-  color: white;
-  font-weight: 600;
-  border: none;
+  width: 124px;
+  height: 44px;
+  top: 275px;
+  left: 1484px;
   border-radius: 8px;
-  cursor: pointer;
+  background: rgba(131, 199, 39, 1);
+;
 }
 
 .edit-btn:hover {
@@ -68,6 +81,7 @@ body {
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   row-gap: 25px;
+  border-radius: 8px;
 }
 
 .form-group {
@@ -83,7 +97,7 @@ body {
 
 .form-group input {
   padding: 12px 14px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 6px;
   font-size: 15px;
   color: #111;
@@ -103,7 +117,7 @@ input[readonly] {
 
 .save-btn {
   padding: 12px 24px;
-  background-color: #4285f4;
+  background-color: hwb(118 26% 4%);
   color: white;
   border: none;
   border-radius: 6px;
@@ -116,17 +130,20 @@ input[readonly] {
 }
 
 .back-btn-wrapper {
-  margin-top: 40px;
+  width: 278.67px;
+  height: 54.27px;
+  left: 264px;
+  top: 1081px;
+  border-radius: 8px;
+
+
 }
 
 .back-btn {
-  padding: 10px 20px;
-  background-color: #e6f9e6;
-  color: #4CAF50;
-  border: none;
-  border-radius: 8px;
+  background-color: white;
+  color: rgba(131, 199, 39, 1);
+  border: 2px;
   cursor: pointer;
-  font-weight: bold;
 }
 
 .back-btn:hover {
@@ -169,11 +186,15 @@ input[readonly] {
   margin-left: 30px;
 }
 .green-top-line {
-  height: 41px;
-  width: 573px;
+  height: 81px;
+  width: 100%;
   top: 135px;
   left: 104px;
-  background-color: rgba(131, 199, 39, 0.77);
+  background: linear-gradient(to right, #9acd32, #e0ffb3);
+  color: rgba(170, 255, 56, 0.32);
   border-top-left-radius: 21px;
   border-top-right-radius: 21px;
+}
+.names{
+  color: #111;
 }
