@@ -1,10 +1,7 @@
 .modal-backdrop {
   position: fixed;
-  width: 938px;
-  height: 1001px;
   width: 100%;
   height: 100%;
-  angle: 0 deg;
   opacity: 1;
   display: flex;
   justify-content: center;
@@ -23,18 +20,18 @@
   background: #fff;
   border-radius: 16px;
   width: 530px;
-  height: 580px;
-  padding: 30px;
-  padding-top: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  height: 600px;
 }
 
 .form-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
   background-color: #ebf9da;
-  margin: -10px -30px 20px -30px;
-  padding: 2px 30px 16px;
-  text-align: center;
-  border-radius: 16px 16px 0 0;
+  border-radius: 16px 16px 0px 0px;
+  padding: 10px;
 }
 
 .logo-title {
@@ -74,6 +71,7 @@
 .form-body {
   display: flex;
   flex-direction: column;
+  padding: 20px 45px;
 }
 
 .form-grid {
@@ -88,7 +86,7 @@
 
 input {
   width: 100%;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-top: 4px;
@@ -103,10 +101,17 @@ label {
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  gap: 16px;
+  gap: 26px;
 }
 
 .add-btn {
+  width: 160px;
+  height: 47px;
+  top: 891px;
+  left: 727px;
+  border-radius: 10px;
+  opacity: 1;
+  border-width: 0.5px;
   background-color: #83c727;
   color: white;
   border: 1px;
@@ -116,11 +121,16 @@ label {
 }
 
 .cancel-btn {
+  width: 160px;
+  height: 49px;
+  top: 889px;
+  left: 974px;
+  opacity: 1;
   background-color: #eee;
   color: #333;
   border: 1px solid #83c727;
   padding: 10px 28px;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
 }
 
