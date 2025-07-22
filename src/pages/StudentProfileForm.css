@@ -175,7 +175,7 @@ input[readonly] {
 .email-row {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   font-weight: 500;
   color: #333;
   font-size: 15px;
@@ -187,10 +187,16 @@ input[readonly] {
 }
 
 .updated-text {
-  font-size: 13px;
+  /* font-size: 13px; */
   color: #888;
-  margin-top: 4px;
-  margin-left: 30px;
+  /* margin-top: 4px;
+  margin-left: 30px; */
+  width: 99;
+height: 24;
+top: 1001px;
+left: 332px;
+opacity: 0.5;
+
 }
 .green-top-line {
   height: 81px;
