@@ -1,0 +1,196 @@
+ body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f7f9fc;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-card {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 21px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.green-top-line {
+  height: 81px;
+  background: linear-gradient(to right, #9acd32, #e0ffb3);
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.names {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.profile-avatar p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.edit-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  background: #83c727;
+  color: white;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background-color: #74b920;
+}
+
+.profile-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 40px;
+  padding: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #111;
+  background-color: #f4f4f4;
+}
+
+input:read-only {
+  background-color: #f4f4f4;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.save-btn {
+  padding: 12px 24px;
+  background-color: #83c727;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 750px; 
+
+
+}
+
+.save-btn:hover {
+  background-color: #74b920;
+}
+
+.email-info {
+  padding: 30px;
+  border-top: 1px solid #eee;
+}
+
+.email-address {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.email-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 15px;
+  color: #333;
+}
+
+.email-row img {
+  width: 20px;
+  height: 20px;
+}
+
+.updated-text {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #888;
+}
+
+.back-btn-wrapper {
+  padding: 0 30px 30px;
+}
+
+.back-btn {
+  background-color: #f4f4f4;
+  color: #83c727;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  background-color: #e6ffe6;
+}
+
+.center {
+  text-align: center;
+  font-size: 18px;
+  padding: 40px;
+  margin-top: 180px;
+}
+
+.error {
+  color: red;
+}
+
+.form-cont{
+padding-left: 50px;
+padding-right: 50px;
+}
+.img-av {
+  margin-top: 30px;
+}
+
+* {
+  border-bottom: none !important;
+}

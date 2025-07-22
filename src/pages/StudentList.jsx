@@ -88,9 +88,7 @@ const StudentList = () => {
               <td className="user-info">
                 <div className="picName">
                   <img src={profilePic} className="profilePic" />
-                  <div>
-                    {student.first_name} {student.last_name}
-                  </div>
+                  <div></div>
                 </div>
               </td>
               <td>{student.student_id}</td>

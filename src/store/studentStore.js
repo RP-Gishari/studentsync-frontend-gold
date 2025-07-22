@@ -56,6 +56,26 @@ const useStudentStore = create((set, get) => ({
     }
   },
 
+  updateStudent: async (id, updatedData) => {
+    set({ loading: true, error: null });
+    try {
+      const response = await API.updateStudent(id, updatedData);
+      if (response.success) {
+        set((state) => ({
+          students: state.students.map((student) =>
+            student.id === id ? response.data : student,
+          ),
+          student: response.data,
+          loading: false,
+        }));
+      } else {
+        set({ error: response.message, loading: false });
+      }
+    } catch (error) {
+      set({ error: error.message, loading: false });
+    }
+  },
+
   // Delete student
   deleteStudent: async (id) => {
     set({ loading: true, error: null });
