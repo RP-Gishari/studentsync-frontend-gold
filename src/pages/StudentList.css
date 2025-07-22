@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+.student-list-container {
+  max-width: 1646px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: inter;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.add-student-btn {
+  background-color: #83c727;
+  color: white;
+  width: 173px;
+  height: 51px;
+  top: 252px;
+  left: 1569px;
+  border-radius: 8px;
+  opacity: 1;
+  padding-top: 16px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  gap: 8px;
+  text-decoration: none;
+  border: 1px solid #83c727;
+}
+
+.add-student-btn:hover {
+  background-color: #6baa21;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  margin-top: 20px;
+  position: relative;
+  font-style: regular;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-family: inter;
+}
+
+.student-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 209px;
+  width: 1646px;
+  height: 108px;
+  font-style: regular;
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.picName {
+  display: flex;
+
+  align-items: center;
+  gap: 10px;
+}
+
+.status.enrolled {
+  color: black;
+  font-weight: regular;
+}
+
+.delete-icon {
+  cursor: pointer;
+  width: 20px;
+  cursor: pointer;
+  display: block;
+  margin-right: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.page {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page.active {
+  background-color: #8fd026;
+  color: white;
+  font-weight: bold;
+}
+
+.allStudents {
+  color: #83c727;
+  width: 225;
+  height: 46;
+  top: 262px;
+  left: 199px;
+  opacity: 1;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+@media (max-width: 768px) {
+  .header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.loading {
+  text-align: center;
+  margin-top: 260px;
+}
+
+.search-bar {
+  position: relative;
+  width: 300px;
+  height: 52px;
+  border-radius: 15px;
+  margin-left: 400px;
+}
+
+.searchInput {
+  padding: 10px 14px 10px 40px;
+  width: 100%;
+  font-size: 14px;
+  border: 0px solid #ccc;
+  border-radius: 15px;
+  background-color: #f4f4f4;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 21px;
+  left: 14px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+.student-table thead {
+  border-radius: 10px;
+  width: 1602px;
+  height: 53px;
+}
+
+.student-table th {
+  padding: 14px 16px;
+  text-align: left;
+  background-color: #ebf9da;
+  width: 1602px;
+  height: 53px;
+  top: 369px;
+  left: 161px;
+  opacity: 1;
+  font-weight: normal;
+}
+
+.student-table tbody tr:first-child td {
+  padding-top: 40px;
+}

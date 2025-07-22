@@ -1,3 +1,5 @@
+import { Update } from "@mui/icons-material";
+
 const apiRequest = async (endpoint, options = {}) => {
   const url = `${import.meta.env.VITE_BACKEND_API_URL}${endpoint}`;
 
@@ -40,14 +42,23 @@ export const API = {
   async getStudent(id) {
     return apiRequest(`/students/${id}`);
   },
-  // update student information
-  async updateStudent(id, updatedData) {
-    return apiRequest(`/students/${id}`, {
-      method: "PUT",
-      body: JSON.stringify(updatedData),
+
+  //Add student
+
+  async addStudent(newAddedStudent) {
+    return apiRequest(`/students`, {
+      method: "POST",
+      body: JSON.stringify(newAddedStudent),
       headers: {
         "Content-Type": "application/json",
       },
+    });
+  },
+
+  // delete student
+  async deleteStudent(id) {
+    return await apiRequest(`/students/${id}`, {
+      method: "DELETE",
     });
   },
 };
