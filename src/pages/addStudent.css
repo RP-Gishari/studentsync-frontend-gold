@@ -19,8 +19,9 @@
   line-height: 1.4;
   background: #fff;
   border-radius: 16px;
-  width: 530px;
-  height: 600px;
+  width: 510px;
+  height: 530px;
+  opacity: 1;
 }
 
 .form-header {
@@ -86,7 +87,7 @@
 
 input {
   width: 100%;
-  padding: 9px 12px;
+  padding: 4px 15px;
   border-radius: 6px;
   border: 1px solid #ccc;
   margin-top: 4px;
@@ -105,8 +106,8 @@ label {
 }
 
 .add-btn {
-  width: 160px;
-  height: 47px;
+  width: 147px;
+  height: 43px;
   top: 891px;
   left: 727px;
   border-radius: 10px;
@@ -121,8 +122,8 @@ label {
 }
 
 .cancel-btn {
-  width: 160px;
-  height: 49px;
+  width: 147px;
+  height: 43px;
   top: 889px;
   left: 974px;
   opacity: 1;
