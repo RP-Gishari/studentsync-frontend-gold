@@ -54,7 +54,16 @@ export const API = {
       },
     });
   },
-
+  // Update student by ID
+  async updateStudent(id, updatedData) {
+    return apiRequest(`/students/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedData),
+    });
+  },
   // delete student
   async deleteStudent(id) {
     return await apiRequest(`/students/${id}`, {
