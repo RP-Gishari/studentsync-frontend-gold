@@ -55,7 +55,7 @@ const useStudentStore = create((set, get) => ({
       set({ error: error.message, loading: false });
     }
   },
-  // Update student
+
   updateStudent: async (id, updatedData) => {
     set({ loading: true, error: null });
     try {
