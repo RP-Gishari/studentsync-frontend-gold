@@ -2,6 +2,7 @@ import React from "react";
 import StudentProfileForm from "../pages/StudentProfileForm";
 import { useState, useEffect } from "react";
 import "./StudentDetailPage.css";
+import image4 from "../assets/image.png";
 
 function StudentDetailPage() {
   const [currentDate, setCurrentDate] = useState("");
@@ -25,6 +26,7 @@ function StudentDetailPage() {
           <p className="time">{currentDate}</p>
         </div>
         <div className="page-search-bar">
+          <img className="img-search-icon" src={image4} />
           <input className="input" type="text" placeholder="Search" />
         </div>
       </div>

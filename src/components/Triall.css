@@ -1,0 +1,15 @@
+.head {
+    background-color: aquamarine;
+}
+.head-title {
+    display: flex;
+    gap: 500px;
+}
+.form-img {
+    display: flex;
+    gap: 500px;
+}
+.forms {
+    display: flex;
+    gap: 30px;
+}

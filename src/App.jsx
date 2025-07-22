@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import StudentList from "./pages/StudentList";
 import StudentDetailPage from "./components/StudentDetailPage";
 import "./App.css";
+// import Detail from "./components/Triall";
 
 const App = () => {
   return (
     <Router>
+      {/* <Detail /> */}
       <div className="app-container">
         <main className="main-content">
           <Routes>

@@ -8,8 +8,7 @@ const StudentList = () => {
 
   useEffect(() => {
     fetchStudents();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [fetchStudents]);
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;

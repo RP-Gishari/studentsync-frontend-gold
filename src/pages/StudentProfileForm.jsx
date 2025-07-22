@@ -40,7 +40,7 @@ const StudentProfileForm = () => {
 
   useEffect(() => {
     getStudent(id);
-  }, [id]);
+  }, [id, getStudent]);
 
   useEffect(() => {
     if (student) {
@@ -174,7 +174,7 @@ const StudentProfileForm = () => {
         <h4 className="email-address">My email Address</h4>
         <div className="email-row">
           <img src={image} alt="Email" />
-          <span>{student.email}</span>
+          <span className="email-span">{student.email}</span>
         </div>
         <p className="updated-text">
           Updated{" "}

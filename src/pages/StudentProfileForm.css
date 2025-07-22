@@ -87,6 +87,13 @@ body {
 .form-group {
   display: flex;
   flex-direction: column;
+  width: 617;
+height: 84;
+top: 662px;
+left: 264px;
+border-radius: 8px;
+opacity: 1;
+
 }
 
 .form-group label {
@@ -200,5 +207,24 @@ input[readonly] {
   
 }
 .email-address{
-  color: #111;
+  color: rgba(0, 0, 0, 1);
+  width: 162px;
+  height: 27px;
+  top: 924px;
+  left: 264px;
+  font-family: poppins;
+  font-weight: 500px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+.email-span {
+  font-family: Poppins;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  color:  rgba(0, 0, 0, 1);
 }
