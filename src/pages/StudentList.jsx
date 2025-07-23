@@ -88,7 +88,14 @@ const StudentList = () => {
               <td className="user-info">
                 <div className="picName">
                   <img src={profilePic} className="profilePic" />
-                  <div></div>
+                  <div>
+                    <Link
+                      to={`/students/${student.id}`}
+                      className="student-name-link"
+                    >
+                      {student.first_name} {student.last_name}
+                    </Link>
+                  </div>
                 </div>
               </td>
               <td>{student.student_id}</td>

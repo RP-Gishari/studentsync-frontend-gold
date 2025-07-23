@@ -1,5 +1,5 @@
- body {
-  font-family: 'Segoe UI', sans-serif;
+body {
+  font-family: "Segoe UI", sans-serif;
   background-color: #f7f9fc;
   margin: 0;
   padding: 0;
@@ -114,9 +114,7 @@ input:read-only {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  margin-left: 750px; 
-
-
+  margin-left: 750px;
 }
 
 .save-btn:hover {
@@ -183,9 +181,9 @@ input:read-only {
   color: red;
 }
 
-.form-cont{
-padding-left: 50px;
-padding-right: 50px;
+.form-cont {
+  padding-left: 50px;
+  padding-right: 50px;
 }
 .img-av {
   margin-top: 30px;
